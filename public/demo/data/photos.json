@@ -89,6 +89,30 @@
             "thumbnailImageSrc": "demo/images/galleria/galleria15s.jpg",
             "alt": "Description for Image 15",
             "title": "Title 15"
+        },
+        {
+            "itemImageSrc": "/public/demo/images/galleria/carusel-1.jpg",
+            "thumbnailImageSrc": "/public/demo/images/galleria/carusel-1.jpg",
+            "alt": "Description for carusel-1",
+            "title": "carusel-1"
+        },
+        {
+            "itemImageSrc": "/public/demo/images/galleria/carusel-2.jpg",
+            "thumbnailImageSrc": "/public/demo/images/galleria/carusel-2.jpg",
+            "alt": "Description for carusel-2",
+            "title": "carusel-2"
+        },
+        {
+            "itemImageSrc": "/public/demo/images/galleria/carusel-3.jpg",
+            "thumbnailImageSrc": "/public/demo/images/galleria/carusel-3.jpg",
+            "alt": "Description for carusel-3",
+            "title": "carusel-3"
+        },
+        {
+            "itemImageSrc": "/public/demo/images/galleria/carusel-4.jpg",
+            "thumbnailImageSrc": "/public/demo/images/galleria/carusel-4.jpg",
+            "alt": "Description for carusel-4",
+            "title": "carusel-4"
         }
     ]
 }

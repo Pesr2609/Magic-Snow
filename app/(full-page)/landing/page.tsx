@@ -1,6 +1,6 @@
 'use client';
 /* eslint-disable @next/next/no-img-element */
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 import { StyleClass } from 'primereact/styleclass';
@@ -11,15 +11,90 @@ import { LayoutContext } from '../../../layout/context/layoutcontext';
 import { NodeRef } from '@/types';
 import { classNames } from 'primereact/utils';
 import { Image } from 'primereact/image';
+import { Carousel } from 'primereact/carousel';
 import { Colors } from 'chart.js';
+import type { Demo } from '@/types';
+import { PhotoService } from '../../../demo/service/PhotoService';
+import { ProductService } from '../../../demo/service/ProductService';
+import { Galleria } from 'primereact/galleria';
+
+
+
 
 const LandingPage = () => {
     const [isHidden, setIsHidden] = useState(false);
     const { layoutConfig } = useContext(LayoutContext);
     const menuRef = useRef<HTMLElement | null>(null);
+    const [products, setProducts] = useState<Demo.Product[]>([]);
+    const [images, setImages] = useState<Demo.Photo[]>([]);
 
-    const toggleMenuItemClick = () => {
+        const toggleMenuItemClick = () => {
         setIsHidden((prevState) => !prevState);
+    };
+
+    const galleriaResponsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 5
+        },
+        {
+            breakpoint: '960px',
+            numVisible: 4
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 3
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1
+        }
+    ];
+    const carouselResponsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 2,
+            numScroll: 2
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
+
+
+    useEffect(() => {
+        ProductService.getProductsSmall().then((products) => setProducts(products));
+
+        PhotoService.getImages().then((images) => setImages(images));
+    }, []);
+
+    
+
+    const carouselItemTemplate = (product: Demo.Product) => {
+        return (
+            <div className="border-1 surface-border border-round m-1 text-center py-5">
+                <div className="mb-3">
+                    <img src={`/demo/images/product/${product.image}`} alt={product.name} className="w-6 shadow-2" />
+                </div>
+                <div>
+                    <h4 className="p-mb-1">{product.name}</h4>
+                    <h6 className="mt-0 mb-3">${product.price}</h6>
+                    <span className={`product-badge status-${product.inventoryStatus?.toLowerCase()}`}>{product.inventoryStatus}</span>
+                    <div className="car-buttons mt-5">
+                        <Button type="button" className="mr-2" rounded icon="pi pi-search"></Button>
+                        <Button type="button" className="mr-2" severity="success" rounded icon="pi pi-star"></Button>
+                        <Button type="button" severity="help" rounded icon="pi pi-cog"></Button>
+                    </div>
+                </div>
+            </div>
+        );
     };
 
     return (
@@ -597,6 +672,19 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div> */}
+                <div className="col-12">
+                    <div className="card">
+                    <h5 className="text-6xl font-bold text-gray-900 line-height-2">
+                            <span className="McLaren fantasy, google"
+                            style={{
+                                color: 'rgb(11, 125, 188)',
+
+                                fontSize: '2rem'
+                            }}
+                            >Lo Mas Vendido</span></h5>
+                        <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={carouselResponsiveOptions} itemTemplate={carouselItemTemplate}></Carousel>
+                    </div>
+                </div>
 
                 <div className="py-4 px-4 mx-0 mt-8 lg:mx-8">
                     <div className="grid justify-content-between">
