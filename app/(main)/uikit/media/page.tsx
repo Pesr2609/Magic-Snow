@@ -34,18 +34,18 @@ const MediaDemo = () => {
     const carouselResponsiveOptions = [
         {
             breakpoint: '1024px',
-            numVisible: 3,
-            numScroll: 3
+            numVisible: 16,
+            numScroll: 16
         },
         {
             breakpoint: '768px',
-            numVisible: 2,
-            numScroll: 2
+            numVisible: 17,
+            numScroll: 17
         },
         {
             breakpoint: '560px',
-            numVisible: 1,
-            numScroll: 1
+            numVisible: 18,
+            numScroll: 18
         }
     ];
 
@@ -83,7 +83,7 @@ const MediaDemo = () => {
             <div className="col-12">
                 <div className="card">
                     <h5>Carousel</h5>
-                    <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={carouselResponsiveOptions} itemTemplate={carouselItemTemplate}></Carousel>
+                    <Carousel value={products} numVisible={4} numScroll={4} responsiveOptions={carouselResponsiveOptions} itemTemplate={carouselItemTemplate}></Carousel>
                 </div>
             </div>
 

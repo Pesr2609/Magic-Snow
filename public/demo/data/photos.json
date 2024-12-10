@@ -94,25 +94,25 @@
             "itemImageSrc": "/public/demo/images/galleria/carusel-1.jpg",
             "thumbnailImageSrc": "/public/demo/images/galleria/carusel-1.jpg",
             "alt": "Description for carusel-1",
-            "title": "carusel-1"
+            "title": "Title 16"
         },
         {
             "itemImageSrc": "/public/demo/images/galleria/carusel-2.jpg",
             "thumbnailImageSrc": "/public/demo/images/galleria/carusel-2.jpg",
             "alt": "Description for carusel-2",
-            "title": "carusel-2"
+            "title": "Title 17"
         },
         {
             "itemImageSrc": "/public/demo/images/galleria/carusel-3.jpg",
             "thumbnailImageSrc": "/public/demo/images/galleria/carusel-3.jpg",
             "alt": "Description for carusel-3",
-            "title": "carusel-3"
+            "title": "Title 18"
         },
         {
             "itemImageSrc": "/public/demo/images/galleria/carusel-4.jpg",
             "thumbnailImageSrc": "/public/demo/images/galleria/carusel-4.jpg",
             "alt": "Description for carusel-4",
-            "title": "carusel-4"
+            "title": "Title 19"
         }
     ]
 }
