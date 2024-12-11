@@ -108,7 +108,7 @@ const LandingPage = () => {
                 }}>
             <div
                     id="hero"
-                    className="flex flex-column pt-4 px-4 lg:px-8 overflow-hidden"
+                    className="flex flex-center pt-4 px-4 lg:px-8 overflow-hidden"
                     style={{
                         background: 'rgb(217 83 39)',
                     }}
@@ -131,13 +131,13 @@ const LandingPage = () => {
                     {/* <img src='/demo/images/galleria/galleria10.jpg' width="100" height="100"> */}
                     {/* {<img src={`/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2" /> } */}
                     <Link href="/" className="flex align-items-center">
-                        <span className="font-medium text-2xl line-height-5 mr-8"
+                        {/* <span className="font-medium text-2xl line-height-5 mr-8"
                         style={{
                             color: 'rgb(253, 254, 254)',
                         }}
                         >
                             Magic Snow
-                        </span>
+                        </span> */}
                     </Link>
                     <StyleClass nodeRef={menuRef as NodeRef} selector="@next" enterClassName="hidden" leaveToClassName="hidden" hideOnOutsideClick>
                         <i ref={menuRef} className="pi pi-bars text-4xl cursor-pointer block lg:hidden text-700"></i>
@@ -146,46 +146,41 @@ const LandingPage = () => {
                         <ul className="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                             <li>
                                 <a href="#Tipos de nieve" onClick={toggleMenuItemClick} className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Tipos de nieve</span>
+                                    <span>Nieve Instantanea en el suelo</span>
                                     <Ripple />
                                 </a>
                             </li>
                             <li>
                                 <a href="#Instrucciones" onClick={toggleMenuItemClick} className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Instrucciones</span>
+                                    <span>Nieve cayendo</span>
                                     <Ripple />
                                 </a>
                             </li>
                             <li>
                                 <a href="#Ideas" onClick={toggleMenuItemClick} className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Ideas</span>
+                                    <span>Paquetes de fiesta de frozen</span>
                                     <Ripple />
                                 </a>
                             </li>
                             <li>
                                 <a href="#Galeria" onClick={toggleMenuItemClick} className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Galeria</span>
+                                    <span>Todo sobre la nieve</span>
                                     <Ripple />
                                 </a>
                             </li>
                             <li>
                                 <a href="#Historia" onClick={toggleMenuItemClick} className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Historia</span>
+                                    <span>Fotos de nieve</span>
                                     <Ripple />
                                 </a>
                             </li>
                             <li>
                                 <a href="#Contacto" onClick={toggleMenuItemClick} className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Contacto</span>
+                                    <span>Profesionales</span>
                                     <Ripple />
                                 </a>
                             </li>
-                            <li>
-                                <a href="#Tienda" onClick={toggleMenuItemClick} className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3">
-                                    <span>Tienda</span>
-                                    <Ripple />
-                                </a>
-                            </li>
+                            
                             <li>
                                 <a className="p-ripple flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3" href='https://www.facebook.com/profile.php?id=61568428485599' title='Facebook'>
                                     <i 
@@ -198,10 +193,10 @@ const LandingPage = () => {
                                 </a>
                             </li>
                         </ul>
-                        <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
+                        {/* <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
                             <Button label="Login" text rounded className="border-none font-light line-height-2 text-blue-500"></Button>
                             <Button label="Register" rounded className="border-none ml-5 font-light line-height-2 bg-blue-500 text-white"></Button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -235,6 +230,9 @@ const LandingPage = () => {
                             }}
                             >¿Por qué elegirnos?</span></h1>
                             <p className="font-normal text-2xl line-height-3 md:mt-3 text-gray-700">Lo que diferencia a la nieve instantánea Magic Snow de otros productos de nieve artificial es su textura y apariencia realistas. La nieve creada con Magic Snow es suave, fresca al tacto y brinda una experiencia táctil que realmente imita la nieve real. Ya sea que esté caminando sobre un manto de nieve o haciendo un ángel de nieve, Magic Snow le permite sumergirse en la experiencia del país de las maravillas invernal.</p>
+                            
+                            <iframe width="420" height="315" src="https://fb.watch/wpGuUeVssk/"></iframe>
+
                             <h1 className="text-6xl font-bold text-gray-900 line-height-2">
                             <span className="McLaren fantasy, google"
                             style={{
@@ -287,12 +285,16 @@ const LandingPage = () => {
                     <div className="grid justify-content-between">
                         <div className="col-12 md:col-2" style={{ marginTop: '-1.5rem' }}>
                             <Link href="/" className="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer">
+                            <Image src={`/demo/images/galleria/icono-magicsnow.JPG`} alt="Image" width="500" 
+                                style={{
+                                    borderRadius: 30,
+                                }}  preview />
                                 {/* <img src={`/layout/images/${layoutConfig.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}.svg`} alt="footer sections" width="50" height="50" className="mr-2" /> */}
-                                <span className="font-medium text-3xl"
+                                {/* <span className="font-medium text-3xl"
                                 style={{
                         
                                     color: 'rgb(253, 254, 254)',
-                                }}>SNOWONDER</span>
+                                }}>SNOWONDER</span> */}
                             </Link>
                         </div>
 
@@ -416,9 +418,21 @@ const LandingPage = () => {
                                         color: 'rgb(253, 254, 254)',
                                     }}>Mantente conectado</h4>
                                     <a href='https://www.facebook.com/profile.php?id=61568428485599' title='Facebook'>
+
                                     <i 
 
                                     className="pi pi-facebook"
+                                    style={{
+                                        background: 'rgb(253, 254, 254)',
+                                        fontSize: '2rem'
+                                    }}>             
+                                    </i>
+                                    </a>
+                                    <a href='https://api.whatsapp.com/send?phone=%2B5215554683837&context=ARCH9xn9xvZafouA7tHAShbg_FgcFtBbfYGYVzMzZTT-FcVjksOtmtpdL6JMAPxvuu0PQ1T3hYCZXoWtCmaQh4-0GpX2cHX7Q3D9m1-NnlSN3SOay9WTpW2Zd3FDSgL3O7-KwafyZCfV02NRU-VJAo7WLg&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawHGz-lleHRuA2FlbQIxMAABHYjoIOXuRyC4mVlSGovdQqJvBpFHrHvRM3oIOpBDMrq6cw76zpga298N1g_aem_42IlOwNgnAJhzF50EGZkYg' title='Facebook'>
+                                    
+                                    <i 
+
+                                    className="pi pi-whatsapp"
                                     style={{
                                         background: 'rgb(253, 254, 254)',
                                         fontSize: '2rem'

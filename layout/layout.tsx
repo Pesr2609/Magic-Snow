@@ -9,6 +9,7 @@ import AppFooter from './AppFooter';
 import AppSidebar from './AppSidebar';
 import AppTopbar from './AppTopbar';
 import AppConfig from './AppConfig';
+import Landing from '../app/(full-page)/landing/page'
 import { LayoutContext } from './context/layoutcontext';
 import { PrimeReactContext } from 'primereact/api';
 import { ChildContainerProps, LayoutState, AppTopbarRef } from '@/types';
@@ -125,15 +126,17 @@ const Layout = ({ children }: ChildContainerProps) => {
     return (
         <React.Fragment>
             <div className={containerClass}>
-                <AppTopbar ref={topbarRef} />
-                <div ref={sidebarRef} className="layout-sidebar">
+                {/* <AppTopbar ref={topbarRef} /> */}
+                <Landing/>
+                
+                {/* <div ref={sidebarRef} className="layout-sidebar">
                     <AppSidebar />
-                </div>
-                <div className="layout-main-container">
+                </div> */}
+                {/* <div className="layout-main-container">
                     <div className="layout-main">{children}</div>
                     <AppFooter />
-                </div>
-                <AppConfig />
+                </div> */}
+                {/* <AppConfig /> */}
                 <div className="layout-mask"></div>
             </div>
         </React.Fragment>
